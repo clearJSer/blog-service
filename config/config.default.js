@@ -46,7 +46,7 @@ module.exports = appInfo => {
     domainWhiteList: [ '*' ],
   };
   config.cors = {
-    origin: [ 'http://localhost:3000', 'http://www.fire1024.com' ], // 只允许这个域进行访问接口
+    origin: [ 'http://localhost:3000', 'http://www.fire1024.com', 'http://152.136.195.13/' ], // 只允许这个域进行访问接口
     credentials: true, // 开启认证
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS',
   };
