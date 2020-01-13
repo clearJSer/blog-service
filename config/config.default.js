@@ -26,7 +26,8 @@ module.exports = appInfo => {
     // database configuration
     client: {
       // host
-      host: '152.136.195.13',
+      // host: '152.136.195.13',
+      host: '127.0.0.1',
       // port
       port: '3306',
       // username
@@ -46,7 +47,7 @@ module.exports = appInfo => {
     domainWhiteList: [ '*' ],
   };
   config.cors = {
-    origin: '*', // 只允许这个域进行访问接口
+    origin: 'http://127.0.0.1:3000', // 只允许这个域进行访问接口
     credentials: true, // 开启认证
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS',
   };
