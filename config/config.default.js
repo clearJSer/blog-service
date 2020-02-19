@@ -44,10 +44,12 @@ module.exports = appInfo => {
   };
   config.security = {
     csrf: { enable: false },
-    domainWhiteList: [ '*' ],
+    // 1、以下加入需要跨域的所有白名单
+    domainWhiteList: [ 'http://localhost:3000', 'http://localhost:3001' ],
   };
   config.cors = {
-    origin: 'http://127.0.0.1:3000', // 只允许这个域进行访问接口
+    // 2、更改origin
+    origin: ctx => ctx.get('origin'),
     credentials: true, // 开启认证
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS',
   };
